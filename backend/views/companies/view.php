@@ -37,4 +37,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <?= '<img src="'.$model->logo.'">'?>
+
 </div>

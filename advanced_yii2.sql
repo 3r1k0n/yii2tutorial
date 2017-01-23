@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jan 23, 2017 at 11:25 AM
+-- Generation Time: Jan 23, 2017 at 01:16 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -55,6 +55,7 @@ CREATE TABLE `companies` (
   `company_name` varchar(100) DEFAULT NULL,
   `company_email` varchar(100) DEFAULT NULL,
   `company_address` varchar(255) DEFAULT NULL,
+  `logo` varchar(200) NOT NULL,
   `company_start_date` date NOT NULL,
   `company_created_date` datetime DEFAULT NULL,
   `company_status` enum('active','inactive') DEFAULT NULL
@@ -64,10 +65,11 @@ CREATE TABLE `companies` (
 -- Dumping data for table `companies`
 --
 
-INSERT INTO `companies` (`company_id`, `company_name`, `company_email`, `company_address`, `company_start_date`, `company_created_date`, `company_status`) VALUES
-(1, 'ABC', 'abc@gmail.com', 'some address', '2010-12-13', '2010-12-13 00:00:00', 'active'),
-(2, 'Easy Company', 'ez@gmail.com', 'Hucklemore Rd. 2', '2015-05-13', '2015-05-13 00:00:00', 'active'),
-(3, 'Blabla', 'bla@gmail.com', 'dsada 24', '2014-05-18', '1901-05-18 00:00:00', 'active');
+INSERT INTO `companies` (`company_id`, `company_name`, `company_email`, `company_address`, `logo`, `company_start_date`, `company_created_date`, `company_status`) VALUES
+(1, 'ABC', 'abc@gmail.com', 'some address', '', '2010-12-13', '2010-12-13 00:00:00', 'active'),
+(2, 'Easy Company', 'ez@gmail.com', 'Hucklemore Rd. 2', '', '2015-05-13', '2015-05-13 00:00:00', 'active'),
+(3, 'Blabla', 'bla@gmail.com', 'dsada 24', '', '2014-05-18', '1901-05-18 00:00:00', 'active'),
+(4, 'DoingITEasy', 'dit@gmail.com', 'Punjab 13', 'uploads/DoingITEasy.jpg', '0000-00-00', '2017-01-23 12:40:28', 'active');
 
 -- --------------------------------------------------------
 
@@ -194,7 +196,7 @@ ALTER TABLE `branches`
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `departments`
 --
