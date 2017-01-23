@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jan 23, 2017 at 09:19 AM
+-- Generation Time: Jan 23, 2017 at 10:38 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -41,7 +41,8 @@ CREATE TABLE `branches` (
 
 INSERT INTO `branches` (`branch_id`, `companies_company_id`, `branch_name`, `branch_address`, `branch_created_date`, `branch_status`) VALUES
 (1, 1, 'Sample branch', 'Rijecka 24', '2017-01-23 08:31:14', 'active'),
-(2, 1, 'another branch', 'another branch address', '2017-01-23 09:06:56', 'active');
+(2, 1, 'another branch', 'another branch address', '2017-01-23 09:06:56', 'active'),
+(3, 2, 'Koper', 'Ulica 5', '2017-01-23 09:45:59', 'active');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,8 @@ CREATE TABLE `departments` (
 
 INSERT INTO `departments` (`department_id`, `branches_branch_id`, `department_name`, `companies_company_id`, `department_created_date`, `department_status`) VALUES
 (1, 1, 'Department one', 1, '2017-01-23 08:32:14', 'active'),
-(2, 2, 'Hello Internet', 1, '2017-01-23 09:11:25', 'inactive');
+(2, 2, 'Hello Internet', 1, '2017-01-23 09:11:25', 'inactive'),
+(3, 3, 'Example', 2, '2017-01-23 10:37:14', 'inactive');
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `branches`
 --
 ALTER TABLE `branches`
-  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `companies`
 --
@@ -195,7 +197,7 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --

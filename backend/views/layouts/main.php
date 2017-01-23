@@ -43,7 +43,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Companies', 'url' => ['/companies']];
         $menuItems[] =['label' => 'Branches', 'url' => ['/branches']];
         $menuItems[] =['label' => 'Departments', 'url' => ['/departments']];
-        
+
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
