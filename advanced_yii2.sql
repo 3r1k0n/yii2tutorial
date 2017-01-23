@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jan 23, 2017 at 01:39 PM
+-- Generation Time: Jan 23, 2017 at 02:17 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -118,7 +118,8 @@ CREATE TABLE `branches` (
 INSERT INTO `branches` (`branch_id`, `companies_company_id`, `branch_name`, `branch_address`, `branch_created_date`, `branch_status`) VALUES
 (1, 1, 'Sample branch', 'Rijecka 24', '2017-01-23 08:31:14', 'active'),
 (2, 1, 'another branch', 'another branch address', '2017-01-23 09:06:56', 'active'),
-(3, 2, 'Koper', 'Ulica 5', '2017-01-23 09:45:59', 'active');
+(3, 2, 'Koper', 'Ulica 5', '2017-01-23 09:45:59', 'active'),
+(4, 3, '', '', '2017-01-23 13:53:16', 'active');
 
 -- --------------------------------------------------------
 
@@ -294,7 +295,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `branches`
 --
 ALTER TABLE `branches`
-  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `companies`
 --
