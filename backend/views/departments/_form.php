@@ -17,8 +17,9 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'companies_company_id')->dropDownList(
         ArrayHelper::map(Companies::find()->all(), 'company_id', 'company_name'),
-        ['prompt'=>'Select Company']
-    ) ?>
+        ['prompt'=>'Select Company',
+        'onchange'=>'$.post( "index.php?r=branches/lists&id='.'"+$(this).val(), function(data) { $("#departments-branches_branch_id").html(data);});'
+        ]); ?>
 
     <?= $form->field($model, 'branches_branch_id')->dropDownList(
         ArrayHelper::map(Branches::find()->all(), 'branch_id', 'branch_name'),
